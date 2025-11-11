@@ -1,38 +1,106 @@
-.App {
+/* body 대신 .App-container에 스타일 적용 */
+.App-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 각 페이지 컴포넌트의 기본 레이아웃 */
+.page-container {
+  width: 100%;
+  max-width: 400px; /* 최대 너비 제한 */
+  min-height: 640px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.page-container h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.page-container p {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.page-container input[type='text'],
+.page-container input[type='password'] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.page-container label {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.page-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  box-sizing: border-box;
+  text-decoration: none; /* Link 태그와 함께 쓸 때를 대비 */
+  display: inline-block; /* Link 태그와 함께 쓸 때를 대비 */
+  text-align: center; /* Link 태그와 함께 쓸 때를 대비 */
+}
+
+.page-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Wireframe 6: 플랜 스타일 */
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1; /* 부모(page-container)의 flex 공간을 채움 */
+}
+
+.plan-box {
+  border: 2px solid #007aff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.plan-box h2 {
+  margin: 0 0 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plan-box p {
+  margin: 0 0 20px 0;
 }
